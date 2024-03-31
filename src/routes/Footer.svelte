@@ -8,11 +8,9 @@
 
 <style>
   footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: var(--footer-spacing);
-    background: color-mix(in srgb, var(--clr-background) 90%, var(--clr-primary));
+    margin-block: var(--footer-spacing);
+    padding: 1rem;
+    border-top: 3px solid var(--clr-accent);
   }
 
   p {
