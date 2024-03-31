@@ -1,0 +1,157 @@
+/* Roboto Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html {
+  --clr-primary-dark: #69b8c9ff;
+  --clr-secondary-dark: #aa479eff;
+  --clr-accent-dark: #353c45ff;
+  --clr-text-dark: #fff5eaff;
+  --clr-text-dim-dark: #cfc5baff;
+  --clr-background-dark: #111618ff;
+  --clr-link-dark: #ffb0efff;
+
+  --clr-primary-light: #69b8c9ff;
+  --clr-secondary-light: #aa479eff;
+  --clr-accent-light: #353c45ff;
+  --clr-text-light: #111618ff;
+  --clr-text-dim-light: #515658ff;
+  --clr-background-light: #fff5eaff;
+  --clr-link-light: #511658ff;
+}
+
+:root {
+  color-scheme: dark;
+
+  --clr-primary: var(--clr-primary-dark);
+  --clr-secondary: var(--clr-secondary-dark);
+  --clr-accent: var(--clr-accent-dark);
+  --clr-text: var(--clr-text-dark);
+  --clr-text-dim: var(--clr-text-dim-dark);
+  --clr-background: var(--clr-background-dark);
+  --clr-link: var(--clr-link-dark);
+
+  --font-p: "Roboto";
+  --font-h: "Roboto";
+
+  --footer-spacing: 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+
+    --clr-primary: var(--clr-primary-light);
+    --clr-secondary: var(--clr-secondary-light);
+    --clr-accent: var(--clr-accent-light);
+    --clr-text: var(--clr-text-light);
+    --clr-text-dim: var(--clr-text-dim-light);
+    --clr-background: var(--clr-background-light);
+    --clr-link: var(--clr-link-light);
+  }
+
+  [color-scheme="dark"] {
+    color-scheme: dark;
+
+    --clr-primary: var(--clr-primary-dark);
+    --clr-secondary: var(--clr-secondary-dark);
+    --clr-accent: var(--clr-accent-dark);
+    --clr-text: var(--clr-text-dark);
+    --clr-text-dim: var(--clr-text-dim-dark);
+    --clr-background: var(--clr-background-dark);
+    --clr-link: var(--clr-link-dark);
+  }
+
+  [color-scheme="light"] {
+    color-scheme: light;
+
+    --clr-primary: var(--clr-primary-light);
+    --clr-secondary: var(--clr-secondary-light);
+    --clr-accent: var(--clr-accent-light);
+    --clr-text: var(--clr-text-light);
+    --clr-text-dim: var(--clr-text-dim-light);
+    --clr-background: var(--clr-background-light);
+    --clr-link: var(--clr-link-light);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+::before,
+::after {
+  pointer-events: none;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: var(--font-h, Georgia);
+  color: var(--clr-text);
+  accent-color: var(--clr-link);
+  background: var(--clr-background);
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+p {
+  font-family: var(--font-p, Verdana);
+}
+
+a:link {
+  color: var(--clr-link);
+}
+
+a:visited {
+  color: var(--clr-text-dim);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

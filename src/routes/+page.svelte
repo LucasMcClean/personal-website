@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import * as config from "$lib/config";
+</script>
+
+<div>
+  <h1>Lucas McClean</h1>
+  <p>Reach the blog landing page at <a href="{config.url}/blog">{config.url}/blog</a></p>
+</div>
+
+<style>
+</style>
