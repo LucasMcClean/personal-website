@@ -8,8 +8,10 @@
 
 <style>
   footer {
-    margin-block: var(--footer-spacing);
-    padding: 1rem;
+    margin-top: 3.5rem;
+    margin-inline: 3vw;
+    padding-block:1.5rem;
+    padding-inline: 1.5vw;
     border-top: 3px solid var(--clr-accent);
   }
 

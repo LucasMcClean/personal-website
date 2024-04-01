@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Footer from "./Footer.svelte";
-  import Header from "./Header.svelte";
+  import Header from "$lib/components/Header.svelte";
+  import Footer from "$lib/components/Footer.svelte";
 
   import "../app.css";
 </script>
@@ -16,8 +16,9 @@
 </div>
 
 <style>
-  main {
-    padding-block: .5rem;
-    padding-inline: 1rem;
+  .layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
   }
 </style>
