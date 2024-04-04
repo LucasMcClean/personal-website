@@ -23,7 +23,7 @@
   }
 
   #navbar a {
-    color: black;
+    color: var(--clr-txt);
     text-decoration: none;
   }
 

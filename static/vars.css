@@ -1,0 +1,39 @@
+:root {
+  color-scheme: dark;
+
+  --clr-txt: white;
+  --clr-bg: black;
+  --clr-acc: blue;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+
+    --clr-txt: black;
+    --clr-bg: white;
+    --clr-acc: blue;
+  }
+}
+
+:root[theme="dark"] {
+  color-scheme: dark;
+
+  --clr-txt: white;
+  --clr-bg: black;
+  --clr-acc: blue;
+}
+
+:root[theme="light"] {
+  color-scheme: light;
+
+  --clr-txt: black;
+  --clr-bg: white;
+  --clr-acc: blue;
+}
+
+html {
+  color: var(--clr-txt);
+  background: var(--clr-bg);
+  accent-color: var(--clr-acc);
+}
