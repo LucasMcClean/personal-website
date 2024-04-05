@@ -17,11 +17,11 @@
   #layout {
     min-height: 100svh;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr auto;
   }
 
   main {
-    margin-top: 0.85rem;
+    margin-top: 4rem;
     margin-bottom: 5rem;
     justify-self: center;
     max-width: 850px;

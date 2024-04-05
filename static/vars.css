@@ -3,25 +3,7 @@
 
   --clr-txt: white;
   --clr-bg: black;
-  --clr-acc: blue;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color-scheme: light;
-
-    --clr-txt: black;
-    --clr-bg: white;
-    --clr-acc: blue;
-  }
-}
-
-:root[theme="dark"] {
-  color-scheme: dark;
-
-  --clr-txt: white;
-  --clr-bg: black;
-  --clr-acc: blue;
+  --clr-acc: goldenrod;
 }
 
 :root[theme="light"] {
@@ -29,7 +11,7 @@
 
   --clr-txt: black;
   --clr-bg: white;
-  --clr-acc: blue;
+  --clr-acc: goldenrod;
 }
 
 html {

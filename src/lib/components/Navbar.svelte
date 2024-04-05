@@ -14,12 +14,26 @@
 
 <style>
   #navbar {
-    padding-block: 0.9rem;
+    position: fixed;
+    width: 100%;
+    padding-block: 0.65rem;
     padding-inline: 2.1rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    background: color-mix(in srgb, var(--clr-bg) 90%, transparent);
     font-size: 1.15rem;
+    backdrop-filter: blur(2px);
+  }
+
+  #navbar::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 2%;
+    width: 90%;
+    height: 1px;
+    background: var(--clr-acc);
   }
 
   #navbar a {
