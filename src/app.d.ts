@@ -1,5 +1,12 @@
 declare global {
-  type Theme = "dark" | "light";
+  interface postMetadata {
+    url: string;
+    title: string;
+    author: string;
+    description: string;
+    publishDate: Date;
+    tags: string[];
+  }
   namespace App {
     // interface Error {}
     // interface Locals {}

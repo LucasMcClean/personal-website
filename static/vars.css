@@ -1,17 +1,17 @@
 :root {
   color-scheme: dark;
 
-  --clr-txt: white;
+  --clr-txt: beige;
   --clr-bg: black;
-  --clr-acc: goldenrod;
+  --clr-acc: #3388ff;
 }
 
 :root[theme="light"] {
   color-scheme: light;
 
   --clr-txt: black;
-  --clr-bg: white;
-  --clr-acc: goldenrod;
+  --clr-bg: beige;
+  --clr-acc: #3388ff;
 }
 
 html {
