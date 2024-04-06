@@ -1,17 +1,17 @@
 :root {
   color-scheme: dark;
 
-  --clr-txt: beige;
-  --clr-bg: black;
-  --clr-acc: #3388ff;
+  --clr-txt: #e6e6e6;
+  --clr-bg: #121212;
+  --clr-acc: #884488;
 }
 
 :root[theme="light"] {
   color-scheme: light;
 
-  --clr-txt: black;
-  --clr-bg: beige;
-  --clr-acc: #3388ff;
+  --clr-txt: #121212;
+  --clr-bg: #e6e6e6;
+  --clr-acc: #884488;
 }
 
 html {

@@ -2,6 +2,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  transition:
+    0.1s ease-in color,
+    0.1s ease-in background;
 }
 
 * {
@@ -27,6 +30,8 @@ html:focus-within {
 }
 
 body {
+  font-family: "Roboto";
+  font-size: 1.1rem;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;

@@ -31,10 +31,10 @@
 <style>
   #theme-toggle {
     position: relative;
-    height: 1.5rem;
-    width: 3rem;
+    height: 1rem;
+    width: 2.6rem;
     border-radius: 20px;
-    background: var(--clr-txt);
+    background: color-mix(in srgb, var(--clr-acc) 65%, var(--clr-txt));
     transition: all 0.2s;
   }
 
@@ -42,10 +42,10 @@
     content: "";
     background: var(--clr-acc);
     position: absolute;
-    top: 0.2rem;
-    left: 0.2rem;
-    height: 1.1rem;
-    width: 1.1rem;
+    top: -0.15rem;
+    left: 0rem;
+    height: 1.3rem;
+    width: 1.3rem;
     border-radius: 50%;
     transition: all ease-out 0.2s;
   }

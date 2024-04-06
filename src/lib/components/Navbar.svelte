@@ -17,11 +17,11 @@
     position: fixed;
     width: 100%;
     padding-block: 0.65rem;
-    padding-inline: 2.1rem;
+    padding-inline: 2.8rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    background: color-mix(in srgb, var(--clr-bg) 90%, transparent);
+    background: color-mix(in srgb, var(--clr-bg) 98%, transparent);
     font-size: 1.15rem;
     backdrop-filter: blur(2px);
   }
@@ -53,6 +53,9 @@
   }
 
   #theme-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     justify-self: end;
   }
 </style>
