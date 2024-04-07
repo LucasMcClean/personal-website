@@ -4,14 +4,18 @@
   --clr-txt: #e6e6e6;
   --clr-bg: #121212;
   --clr-acc: #884488;
+
+  --clr-nav: #1a1a1a;
 }
 
 :root[theme="light"] {
   color-scheme: light;
 
   --clr-txt: #121212;
-  --clr-bg: #e6e6e6;
+  --clr-bg: #f6f6f6;
   --clr-acc: #884488;
+
+  --clr-nav: var(--clr-bg);
 }
 
 html {

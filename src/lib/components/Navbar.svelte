@@ -1,9 +1,11 @@
 <script lang="ts">
   import ThemeToggle from "$lib/components/ThemeToggle.svelte";
+  import { page } from "$app/stores";
 </script>
 
 <nav id="navbar">
-  <a id="navbar-title" href="/">Lucas McClean</a>
+  <a id="navbar-title" href="/">Lucas McClean <span id="current-page">{$page.url.pathname}</span></a
+  >
   <ul id="navbar-links" role="list">
     <li><a href="/">Landing</a></li>
     <li><a href="/posts">Posts</a></li>
@@ -17,11 +19,12 @@
     position: fixed;
     width: 100%;
     padding-block: 0.65rem;
-    padding-inline: 2.8rem;
+    padding-inline: 8vw;
+    border-bottom-right-radius: 100px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    background: color-mix(in srgb, var(--clr-bg) 98%, transparent);
+    background: color-mix(in srgb, var(--clr-nav) 97.5%, transparent);
     font-size: 1.15rem;
     backdrop-filter: blur(2px);
   }
@@ -30,8 +33,8 @@
     content: "";
     position: absolute;
     top: 100%;
-    left: 2%;
-    width: 90%;
+    left: 0;
+    width: 94vw;
     height: 1px;
     background: var(--clr-acc);
   }
@@ -44,6 +47,10 @@
   #navbar-title {
     font-size: 1.25rem;
     font-weight: bold;
+  }
+
+  #current-page {
+    opacity: 67%;
   }
 
   #navbar-links {

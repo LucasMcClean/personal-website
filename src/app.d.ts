@@ -2,7 +2,6 @@ declare global {
   interface postMetadata {
     url: string;
     title: string;
-    author: string;
     description: string;
     publishDate: Date;
     tags: string[];
