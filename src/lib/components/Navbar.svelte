@@ -1,10 +1,19 @@
 <script lang="ts">
   import ThemeToggle from "$lib/components/ThemeToggle.svelte";
   import { page } from "$app/stores";
+
+  function getURL(url: string): string {
+    const urlArr: string[] = url.split("/").slice(0, 2);
+    if (urlArr[1].length > 10) {
+      urlArr[1] = urlArr[1].slice(0, 11) + "...";
+    }
+    return urlArr.join("/");
+  }
 </script>
 
 <nav id="navbar">
-  <a id="navbar-title" href="/">Lucas McClean <span id="current-page">{$page.url.pathname}</span></a
+  <a id="navbar-title" href="/"
+    >Lucas McClean <span id="current-page">{getURL($page.url.pathname)}</span></a
   >
   <ul id="navbar-links" role="list">
     <li><a href="/">Landing</a></li>
@@ -17,7 +26,7 @@
 <style>
   #navbar {
     position: fixed;
-    width: 100%;
+    width: 98%;
     padding-block: 0.65rem;
     padding-inline: 8vw;
     border-bottom-right-radius: 100px;
@@ -34,7 +43,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 94vw;
+    width: 92vw;
     height: 1px;
     background: var(--clr-acc);
   }

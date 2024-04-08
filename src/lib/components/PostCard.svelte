@@ -1,11 +1,13 @@
 <script lang="ts">
-  export let postInfo: postMetadata;
+  import { slugify } from "$lib/utils";
+
+  export let postInfo: PostMetadata;
   export let postHeight: string;
   export let postWidth: string;
 </script>
 
 <div id="post-card" style="height: {postHeight}; width: {postWidth};">
-  <a id="title" href={postInfo.url}>{postInfo.title}</a>
+  <a id="title" href={slugify(postInfo.title)}>{postInfo.title}</a>
   <p id="publish-date">
     Published on {postInfo.publishDate.toLocaleDateString()}
   </p>

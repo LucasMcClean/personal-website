@@ -1,8 +1,7 @@
 <script lang="ts">
   import PostCard from "$lib/components/PostCard.svelte";
 
-  let examplePost: postMetadata = {
-    url: "/posts",
+  let examplePost: PostMetadata = {
     title: "Example Post",
     publishDate: new Date(),
     description:
