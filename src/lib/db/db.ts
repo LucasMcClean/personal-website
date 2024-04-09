@@ -1,7 +1,14 @@
-import postgres from "postgres";
+import { Client } from "pg";
 
-const CONNECTION_URL = "postgresql://user:password@127.0.0.1:5432/DB";
+const client = new Client({
+  user: "postgres",
+  password: "postgres",
+  host: "localhost",
+  port: 5432,
+  database: "db",
+});
 
-const sql = postgres(CONNECTION_URL);
-
-export default sql;
+client
+  .connect()
+  .then(() => console.log("Connnected to database"))
+  .catch((err) => console.log("Error connecting to database: ", err));
