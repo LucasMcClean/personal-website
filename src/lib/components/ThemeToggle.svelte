@@ -14,7 +14,6 @@
   function toggleTheme(): void {
     let curTheme = document.documentElement.getAttribute("theme");
     const theme: Theme = curTheme === "dark" ? "light" : "dark";
-    console.log("clicked", curTheme, theme);
     setTheme(theme);
   }
 
@@ -25,6 +24,7 @@
   });
 </script>
 
+<span id={activeTheme}></span>
 <button id="theme-toggle" class={activeTheme} on:click={toggleTheme} aria-label="toggle theme"
 ></button>
 
@@ -52,5 +52,17 @@
 
   .light::before {
     transform: translate(1.3rem);
+  }
+
+  #light::before {
+    color: color-mix(in srgb, var(--clr-txt) 70%, transparent);
+    padding-right: 0.3rem;
+    content: "dark";
+  }
+
+  #dark::before {
+    color: color-mix(in srgb, var(--clr-txt) 70%, transparent);
+    padding-right: 0.3rem;
+    content: "light";
   }
 </style>

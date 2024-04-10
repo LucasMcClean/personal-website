@@ -10,4 +10,6 @@
   };
 </script>
 
+<title>Posts | Lucas McClean</title>
+
 <PostCard postInfo={examplePost} postHeight="15rem" postWidth="20rem" />

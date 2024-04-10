@@ -10,6 +10,21 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+  external:
+    container_name: site
+    image: site
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: "node"
+    environment:
+      - NODE_ENV=production
+      - TZ=Pacific/Auckland
+    env_file:
+      - .env
+    restart: unless-stopped
+    ports:
+      - 3000:5050
 
 volumes:
   db:
