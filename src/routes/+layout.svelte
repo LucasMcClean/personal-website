@@ -24,6 +24,5 @@
     margin-top: 4rem;
     margin-bottom: 5rem;
     justify-self: center;
-    max-width: 850px;
   }
 </style>
