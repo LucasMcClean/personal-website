@@ -19,14 +19,38 @@
 
 <fieldset id="technologies" role="figure">
   <legend>Technologies</legend>
-  <img class="tech-img" src={html} alt="HTML" />
-  <img class="tech-img" src={css} alt="CSS" />
-  <img class="tech-img" src={js} alt="JavaScript" />
-  <img class="tech-img" src={ts} alt="TypeScript" />
-  <img class="tech-img" src={node} alt="NodeJS" />
-  <img class="tech-img" src={svelte} alt="Svelte and SvelteKit" />
-  <img class="tech-img" src={git} alt="Git" />
-  <img class="tech-img" src={docker} alt="Docker" />
+  <figure>
+    <img class="tech-img" src={html} alt="HTML" />
+    <figcaption>HTML5</figcaption>
+  </figure>
+  <figure>
+    <img class="tech-img" src={css} alt="CSS" />
+    <figcaption>CSS</figcaption>
+  </figure>
+  <figure>
+    <img class="tech-img" src={js} alt="JavaScript" />
+    <figcaption>JavaScript</figcaption>
+  </figure>
+  <figure>
+    <img class="tech-img" src={ts} alt="TypeScript" />
+    <figcaption>TypeScript</figcaption>
+  </figure>
+  <figure>
+    <img class="tech-img" src={node} alt="NodeJS" />
+    <figcaption>NodeJS</figcaption>
+  </figure>
+  <figure>
+    <img class="tech-img" src={svelte} alt="Svelte and SvelteKit" />
+    <figcaption>Svelte/Kit</figcaption>
+  </figure>
+  <figure>
+    <img class="tech-img" src={git} alt="Git" />
+    <figcaption>Git</figcaption>
+  </figure>
+  <figure>
+    <img id="fix-ar" class="tech-img" src={docker} alt="Docker" />
+    <figcaption>Docker</figcaption>
+  </figure>
 </fieldset>
 
 <style>
@@ -49,12 +73,27 @@
   }
 
   #technologies img {
-    max-height: 7vw;
-    max-width: 7vw;
+    max-height: max(7vw, 5rem);
+    max-width: max(7vw, 5rem);
     transition: all 0.2s;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  figcaption {
+    margin-top: 5px;
+    color: color-mix(in srgb, var(--clr-txt) 67%, transparent);
   }
 
   .tech-img:hover {
     transform: translate(-5px, -5px);
+  }
+
+  #fix-ar {
+    padding-block: 13.5px;
   }
 </style>
