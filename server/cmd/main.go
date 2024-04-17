@@ -1,13 +1,18 @@
 package main
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
+	"github.com/lucasmcclean/personal-website/server/database"
+)
 
 func main() {
-	app := fiber.New()
+	database.ConnectDB()
 
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Testing...")
-	})
+    app := fiber.New()
+		app.Use(cors.New())
 
-	app.Listen(":3000")
+		initializeRoutes(app)
+
+    app.Listen(":3000")
 }

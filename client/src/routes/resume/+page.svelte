@@ -7,6 +7,24 @@
   import svelte from "$lib/images/svelte.png";
   import git from "$lib/images/git.png";
   import docker from "$lib/images/docker.png";
+
+  function sendRequest() {
+    fetch("http://localhost:3000/create-post", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        postId: "test-post",
+        title: "Test Post",
+        publishDate: "04/17/2024",
+        tags: ["tag1", "tag2", "tag3"],
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error(error));
+  }
 </script>
 
 <title>Resume | Lucas McClean</title>
@@ -53,6 +71,8 @@
   </figure>
 </fieldset>
 
+<button on:click={sendRequest}> Send request </button>
+
 <style>
   #technologies {
     width: fit-content;
@@ -95,5 +115,10 @@
 
   #fix-ar {
     padding-block: 13.5px;
+  }
+
+  button {
+    height: 10vw;
+    width: 10vw;
   }
 </style>
