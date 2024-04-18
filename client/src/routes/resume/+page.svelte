@@ -15,10 +15,11 @@
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        postId: "test-post",
+        postSlug: "test-post",
         title: "Test Post",
-        publishDate: "04/17/2024",
-        tags: ["tag1", "tag2", "tag3"],
+        publishDate: "2024-04-18",
+        tags: "tag1,tag2,tag3",
+        content: "blah blah blah... testing 1 2 3",
       }),
     })
       .then((response) => response.json())

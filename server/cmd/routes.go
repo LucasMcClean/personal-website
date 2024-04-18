@@ -18,7 +18,6 @@ func initializeRoutes(app *fiber.App) {
 				"message": err.Error(),
 			})
 		}
-
 		database.DB.DB.Create(&post)
 
 		return c.Status(200).JSON(post)

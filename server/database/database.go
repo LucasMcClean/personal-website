@@ -20,7 +20,7 @@ var DB DBinstance
 
 func ConnectDB() {
 	dsn := fmt.Sprintf(
-		"host=db user=%s password=%s dbname=%s port=5432 sslmode=disable TimeZone=Asia/Shanghai",
+		"host=db user=%s password=%s dbname=%s port=5432 sslmode=disable",
 		os.Getenv("DB_USER"),
 		os.Getenv("DB_PASSWORD"),
 		os.Getenv("DB_NAME"))
@@ -37,7 +37,7 @@ func ConnectDB() {
 	log.Println("Database connected")
 	db.Logger = logger.Default.LogMode(logger.Info)
 
-	log.Println("running migrations")
+	log.Println("Running migrations")
   db.AutoMigrate(&models.Post{})
 
 	DB = DBinstance{
