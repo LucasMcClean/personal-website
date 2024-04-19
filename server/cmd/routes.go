@@ -19,7 +19,17 @@ func initializeRoutes(app *fiber.App) {
 			})
 		}
 		database.DB.DB.Create(&post)
-
 		return c.Status(200).JSON(post)
+	})
+
+	app.Get("/posts", func(c *fiber.Ctx) error {
+		var posts []models.Post
+		result := database.DB.DB.Find(&posts)
+		if result.Error != nil {
+			return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
+				"message": result.Error,
+			})
+		}
+		return c.Status(200).JSON(posts);
 	})
 }

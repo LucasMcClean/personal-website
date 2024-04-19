@@ -26,6 +26,12 @@
       .then((data) => console.log(data))
       .catch((error) => console.error(error));
   }
+
+  function fetchDB() {
+    fetch("http://localhost:3000/posts")
+      .then(async (response) => console.log(await response.json()))
+      .catch((error) => console.log(error));
+  }
 </script>
 
 <title>Resume | Lucas McClean</title>
@@ -73,6 +79,7 @@
 </fieldset>
 
 <button on:click={sendRequest}> Send request </button>
+<button on:click={fetchDB}>Fetch DB</button>
 
 <style>
   #technologies {
