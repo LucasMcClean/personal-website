@@ -9,11 +9,11 @@
 <div id="post-card" style="height: {postHeight}; width: {postWidth};">
   <a id="title" href={slugify(postInfo.title)}>{postInfo.title}</a>
   <p id="publish-date">
-    Published on {postInfo.publishDate.toLocaleDateString()}
+    Published on {postInfo.publishDate}
   </p>
   <p id="description">{postInfo.description}</p>
   <div id="tags" role="list">
-    {postInfo.tags.join(", ")}
+    {postInfo.tags}
   </div>
 </div>
 

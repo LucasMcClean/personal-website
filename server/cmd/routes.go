@@ -24,12 +24,12 @@ func initializeRoutes(app *fiber.App) {
 
 	app.Get("/posts", func(c *fiber.Ctx) error {
 		var posts []models.Post
-		result := database.DB.DB.Find(&posts)
+		result := database.DB.DB.Select("title", "publish_date", "post_slug", "description", "tags", "content").Find(&posts)
 		if result.Error != nil {
 			return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
 				"message": result.Error,
 			})
 		}
-		return c.Status(200).JSON(posts);
+		return c.Status(200).JSON(posts)
 	})
 }

@@ -7,31 +7,6 @@
   import svelte from "$lib/images/svelte.png";
   import git from "$lib/images/git.png";
   import docker from "$lib/images/docker.png";
-
-  function sendRequest() {
-    fetch("http://localhost:3000/create-post", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        postSlug: "test-post",
-        title: "Test Post",
-        publishDate: "2024-04-18",
-        tags: "tag1,tag2,tag3",
-        content: "blah blah blah... testing 1 2 3",
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.error(error));
-  }
-
-  function fetchDB() {
-    fetch("http://localhost:3000/posts")
-      .then(async (response) => console.log(await response.json()))
-      .catch((error) => console.log(error));
-  }
 </script>
 
 <title>Resume | Lucas McClean</title>
@@ -77,9 +52,6 @@
     <figcaption>Docker</figcaption>
   </figure>
 </fieldset>
-
-<button on:click={sendRequest}> Send request </button>
-<button on:click={fetchDB}>Fetch DB</button>
 
 <style>
   #technologies {
