@@ -21,11 +21,12 @@
     let curTheme = document.documentElement.getAttribute("theme");
     const theme: Theme = curTheme === "dark" ? "dark" : "light";
     activeTheme = theme;
+    document.getElementById("theme-toggle")
+      ?.style.setProperty("toggle-position", theme === "dark" ? "0rem" : "1.3rem");
   });
 </script>
 
-<span id={activeTheme}></span>
-<button id="theme-toggle" class={activeTheme} on:click={toggleTheme} aria-label="toggle theme"
+<button id="theme-toggle" class={activeTheme} on:click={toggleTheme} aria-label="toggle color scheme"
 ></button>
 
 <style>
@@ -52,17 +53,5 @@
 
   .light::before {
     transform: translate(1.3rem);
-  }
-
-  #light::before {
-    color: color-mix(in srgb, var(--clr-txt) 70%, transparent);
-    padding-right: 0.3rem;
-    content: "dark";
-  }
-
-  #dark::before {
-    color: color-mix(in srgb, var(--clr-txt) 70%, transparent);
-    padding-right: 0.3rem;
-    content: "light";
   }
 </style>

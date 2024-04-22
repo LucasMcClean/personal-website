@@ -43,9 +43,9 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 92vw;
     height: 1px;
     background: var(--clr-acc);
+    animation: loadIn 1s ease-out 1 forwards;
   }
 
   #navbar a {
@@ -73,5 +73,14 @@
     justify-content: center;
     align-items: center;
     justify-self: end;
+  }
+
+  @keyframes loadIn {
+    0% {
+      width: 0vw;
+    }
+    100% {
+      width: 92vw;
+    }
   }
 </style>
