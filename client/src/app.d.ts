@@ -3,12 +3,12 @@ declare global {
     title: string;
     description: string;
     publishDate: Date;
-    tags: string[];
+    tags: string;
   }
   interface Post {
     title: string;
     publishDate: Date;
-    tags: string[];
+    tags: string;
     content;
   }
   namespace App {

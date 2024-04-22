@@ -1,7 +1,7 @@
 <slot />
 
 <style>
-  #title {
+  /* #title {
     font-size: 3.5rem;
   }
   h1,
@@ -22,5 +22,5 @@
 
   h3 {
     font-size: 1.5rem;
-  }
+  } */
 </style>

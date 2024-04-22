@@ -96,9 +96,4 @@
   #fix-ar {
     padding-block: 13.5px;
   }
-
-  button {
-    height: 10vw;
-    width: 10vw;
-  }
 </style>

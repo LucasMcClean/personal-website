@@ -13,7 +13,8 @@ func initializeRoutes(app *fiber.App) {
 
 	app.Post("/create-post", func (c *fiber.Ctx) error {
 		post := new(models.Post)
-		if err := c.BodyParser(post); err != nil {
+		err := c.BodyParser(post)
+		if err != nil {
 			return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
 				"message": err.Error(),
 			})
