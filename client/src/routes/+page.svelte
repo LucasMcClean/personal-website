@@ -31,10 +31,16 @@
 
 <style>
   article {
-    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   h1 {
+    max-width: 850px;
     margin-bottom: 0.2rem;
     font-size: 5rem;
+  }
+  p {
+    max-width: 850px;
   }
 </style>

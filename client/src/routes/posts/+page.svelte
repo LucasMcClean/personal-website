@@ -6,20 +6,27 @@
 
 <title>Posts | Lucas McClean</title>
 
+{#if data.posts.length === 0}
+ <p>There seems to have been an issue retrieving the posts.</p>
+{/if}
+
 <ul>
   {#each data.posts as post}
-    <li><PostCard postInfo={post} postHeight="15rem" postWidth="20rem" /></li>
+    <li><PostCard postInfo={post} postHeight="fit-content" postWidth="100%" /></li>
   {/each}
 </ul>
 
 <style>
   ul {
+    width: 100%;
     list-style: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: center;
-    gap: 1rem;
+    display: grid;
+    grid-template: auto / 1fr;
+    gap: 1.5rem;
+  }
+  p {
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    font-style: italic;
   }
 </style>

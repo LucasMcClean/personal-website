@@ -9,26 +9,27 @@
 
 <div id="post-card" style="height: {postHeight}; width: {postWidth};">
   <a id="title" href={slugify(postInfo.title)}>{postInfo.title}</a>
-  <p id="publish-date">
-    Published on {formatDate(new Date(postInfo.publishDate))}
-  </p>
-  <p id="description">{postInfo.description}</p>
-  <div id="tags" role="list">
-    {postInfo.tags.split(",").join(", ")}
+  <div id="card-content">
+    <p id="publish-date">
+      Published on {formatDate(new Date(postInfo.publishDate))}
+    </p>
+    <p id="description">{postInfo.description}</p>
+    <div id="tags" role="list">
+      {postInfo.tags.split(",").map((a) => "#"+a).join(", ")}
+    </div>
   </div>
 </div>
 
 <style>
   #post-card {
-    padding-block: 0.8rem;
-    padding-inline: 1.3rem;
-    border-radius: 20px;
-    background: var(--clr-acc);
+    width: 100%;
+    padding-left: 2.5rem;
+    display: grid;
   }
   #title {
     color: var(--clr-text);
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 4rem;
     font-weight: bold;
   }
   #publish-date {
