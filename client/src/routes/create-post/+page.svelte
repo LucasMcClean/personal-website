@@ -9,21 +9,40 @@
       .getElementById("content")
       ?.addEventListener("change", function (this: HTMLInputElement, event) {
         file = this.files![0];
+        console.log(file);
       });
   });
 
-  function handleSubmit() {
+  async function handleSubmit() {
     const fileReader = new FileReader();
     fileReader.readAsText(file);
 
-    const existingForm: HTMLFormElement = document.getElementsByTagName("form")[0];
-    const form = new FormData(existingForm);
-    form.delete("content");
-    form.append("content", fileReader.result as string);
+    fileReader.onload = async () => {
+      console.log("Getting there");
+      const existingForm: HTMLFormElement = document.getElementsByTagName("form")[0];
+      const formData = new FormData(existingForm);
+      formData.delete("content");
+      formData.append("content", fileReader.result as string);
+
+      try {
+        // REMOVE ME ------------------------------------------------------------------
+        const response = await fetch("http://localhost:5173/create-post", {
+          method: "POST",
+          body: formData,
+        });
+        if (!response.ok) {
+          alert("Failed to submit form. Try again.");
+        } else {
+          document.getElementsByTagName("form")[0].reset();
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
   }
 </script>
 
-<form method="post" on:submit={handleSubmit}>
+<form method="post" on:submit|preventDefault={handleSubmit}>
   <label for="title">Title: </label>
   <input id="title" name="title" required />
   <label for="tags">Tags: </label>
@@ -37,7 +56,6 @@
 
 <style>
   form {
-    margin: auto;
     padding-block: 1.8rem;
     padding-top: 1.5rem;
     padding-inline: 2.5rem;

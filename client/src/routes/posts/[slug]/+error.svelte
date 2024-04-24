@@ -8,7 +8,10 @@
   <h1>{status}: {error}</h1>
   {#if status === 500}
     <p>Unfortunately the server is down. Please check back later.</p>
+  {:else if status === 404}
+    <p>It looks like that page couldn't be found.</p>
   {/if}
+
 </div>
 
 <style>

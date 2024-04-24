@@ -8,6 +8,7 @@ export const actions = {
   default: async (event) => {
     const data = await event.request.formData();
 
+    // REMOVE ME ------------------------------------------------------------------
     if (data.get("title") === "testing") {
       await seedPosts();
       return;

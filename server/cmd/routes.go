@@ -33,4 +33,19 @@ func initializeRoutes(app *fiber.App) {
 		}
 		return c.Status(200).JSON(posts)
 	})
+
+	app.Get("/posts/:slug", func(c *fiber.Ctx) error {
+		var post models.Post
+		result := database.DB.DB.Where(&models.Post{PostSlug: c.Params("slug")}).First(&post)
+		if result.Error != nil {
+			return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
+				"message": result.Error,
+			})
+		} else if result.RowsAffected == 0 {
+			return c.Status(fiber.StatusNotFound).JSON(fiber.Map{
+				"message": "The request post could not be found.",
+			})
+		}
+		return c.Status(200).JSON(post)
+	})
 }
