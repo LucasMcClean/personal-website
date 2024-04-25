@@ -21,8 +21,8 @@
   }
 
   main {
-    width: 100%;
     margin-top: 4rem;
     margin-bottom: 5rem;
+    margin-inline: auto;
   }
 </style>

@@ -2,9 +2,9 @@
   import ThemeToggle from "$lib/components/ThemeToggle.svelte";
   import { page } from "$app/stores";
 
-  function getURL(url: string): string {
+  function getShortenedURL(url: string): string {
     const urlArr: string[] = url.split("/").slice(0, 2);
-    if (urlArr[1].length > 10) {
+    if (urlArr[1].length > 11) {
       urlArr[1] = urlArr[1].slice(0, 11) + "...";
     }
     return urlArr.join("/");
@@ -13,7 +13,7 @@
 
 <nav id="navbar">
   <a id="navbar-title" href="/"
-    >Lucas McClean <span id="current-page">{getURL($page.url.pathname)}</span></a
+    >Lucas McClean <span id="current-page">{getShortenedURL($page.url.pathname)}</span></a
   >
   <ul id="navbar-links" role="list">
     <li><a href="/">Landing</a></li>

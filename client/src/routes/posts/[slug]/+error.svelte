@@ -4,6 +4,8 @@
   let error = $page!.error!.message;
 </script>
 
+<title>Error {status}</title>
+
 <div id="error">
   <h1>{status}: {error}</h1>
   {#if status === 500}

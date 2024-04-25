@@ -30,13 +30,8 @@
 </article>
 
 <style>
-  article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   h1 {
-    max-width: 850px;
+    width: 850px;
     margin-bottom: 0.2rem;
     font-size: 5rem;
   }

@@ -18,11 +18,14 @@
 
 <style>
   ul {
-    width: 100%;
+    width: 100vw;
     list-style: none;
     display: grid;
     grid-template: auto / 1fr;
     gap: 1.5rem;
+  }
+  ul li {
+    padding: 0;
   }
   p {
     margin-top: 3rem;
