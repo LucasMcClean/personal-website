@@ -29,15 +29,16 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+    font-size: var(--fs-p);
   }
   #card-info {
-    max-width: 40%;
+    width: 30%;
   }
   #title {
     color: var(--clr-text);
     line-height: 1;
     text-decoration: none;
-    font-size: 4rem;
+    font-size: calc(var(--fs-h2) + 2rem);
     font-weight: bold;
   }
   #publish-date {
@@ -50,6 +51,7 @@
     list-style: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: .5rem;
   }
   #tags li {

@@ -8,5 +8,6 @@
     padding-block: 1.2rem;
     padding-inline: 2.2rem;
     border-top: 2px solid var(--clr-txt);
+    font-size: var(--fs-p);
   }
 </style>

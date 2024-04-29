@@ -9,7 +9,6 @@
       .getElementById("content")
       ?.addEventListener("change", function (this: HTMLInputElement, event) {
         file = this.files![0];
-        console.log(file);
       });
   });
 
@@ -18,7 +17,6 @@
     fileReader.readAsText(file);
 
     fileReader.onload = async () => {
-      console.log("Getting there");
       const existingForm: HTMLFormElement = document.getElementsByTagName("form")[0];
       const formData = new FormData(existingForm);
       formData.delete("content");
@@ -69,13 +67,14 @@
 
   label {
     cursor: pointer;
-    font-size: 1.4rem;
+    font-size: var(--fs-n);
     font-weight: bold;
   }
 
   input {
     height: 1.8rem;
     padding: .1rem;
+    background: color-mix(in srgb, var(--clr-bg) 90%, var(--clr-txt));
   }
 
   label[for="description"] {
@@ -89,10 +88,12 @@
   textarea {
     resize: none;
     padding: .1rem;
+    background: color-mix(in srgb, var(--clr-bg) 90%, var(--clr-txt));
   }
 
   button {
     cursor: pointer;
     grid-column: 1 / 3;
+    background: color-mix(in srgb, var(--clr-bg) 90%, var(--clr-txt));
   }
 </style>

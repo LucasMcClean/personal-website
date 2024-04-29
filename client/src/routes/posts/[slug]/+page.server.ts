@@ -12,6 +12,5 @@ export async function load({ params }) {
     });
   }
   const compiledPost = await compile(data.posts.content);
-  console.log(compiledPost);
   return { post: data.posts, content: compiledPost?.code };
 }

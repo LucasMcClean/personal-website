@@ -2,25 +2,27 @@
   export let data;
 </script>
 
-<title>{data.post.title}</title>
-
-<h1 id="title">{data.post.title}</h1>
 <article id="active-post">
-  {@html data.content}
-  <ul>
-    <li>Test</li>
-  </ul>
+  <h1 id="title">{data.post.title}</h1>
+  <div id="weird-fix"></div>
+  <div id="content">
+    {@html data.content}
+  </div>
 </article>
 
 <style>
   article {
-    width: 850px;
+    display: flex;
+    flex-direction: column;
+  }
+  #content {
+    max-width: 850px;
   }
   #title {
     max-width: 850px;
     margin-bottom: 1.5rem;
     line-height: 1;
-    font-size: 5rem;
+    font-size: calc(var(--fs-h1) + 2rem);
     font-weight: bold;
   }
   :global(#active-post 
@@ -33,16 +35,19 @@
     font-weight: bold;
   }
   :global(#active-post h1) {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw + .5rem, 3rem);
   }
   :global(#active-post h2) {
-    font-size: 2rem;
+    font-size: var(--fs-h2);
   }
   :global(#active-post h3) {
-    font-size: 1.5rem;
+    font-size: var(--fs-h3);
   }
   :global(#active-post ul) {
-    list-style: inside;
+    margin-left: 1.1rem;
+  }
+  :global(#active-post ol) {
+    margin-left: 1.1rem;
   }
   :global(#active-post blockquote) {
     margin-left: .7rem;
@@ -56,6 +61,16 @@
   }
   :global(#active-post strong) {
     font-weight: bold;
+  }
+
+  #weird-fix {
+    width: 850px;
+  }
+
+  @media (max-width: 1000px) {
+    #weird-fix {
+      width: 85vw;
+    }
   }
 </style>
 

@@ -16,7 +16,7 @@
     >Lucas McClean <span id="current-page">{getShortenedURL($page.url.pathname)}</span></a
   >
   <ul id="navbar-links" role="list">
-    <li><a href="/">Landing</a></li>
+    <li><a href="/">Home</a></li>
     <li><a href="/posts">Posts</a></li>
     <li><a href="/resume">Resume</a></li>
   </ul>
@@ -25,6 +25,7 @@
 
 <style>
   #navbar {
+    container-type: inline-size;
     position: fixed;
     width: 98%;
     padding-block: 0.65rem;
@@ -34,7 +35,7 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     background: color-mix(in srgb, var(--clr-nav) 97.5%, transparent);
-    font-size: 1.15rem;
+    font-size: var(--fs-n);
     backdrop-filter: blur(2px);
   }
 
@@ -54,7 +55,7 @@
   }
 
   #navbar-title {
-    font-size: 1.25rem;
+    font-size: calc(var(--fs-n) + .1rem);
     font-weight: bold;
   }
 
@@ -73,6 +74,12 @@
     justify-content: center;
     align-items: center;
     justify-self: end;
+  }
+
+  @container (width < 850px) {
+    #navbar-title span {
+      display:none;
+    }
   }
 
   @keyframes loadIn {

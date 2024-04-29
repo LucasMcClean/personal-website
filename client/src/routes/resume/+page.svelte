@@ -9,49 +9,49 @@
   import docker from "$lib/images/docker.png";
 </script>
 
-<title>Resume | Lucas McClean</title>
+<article>
+  <h1>What I do</h1>
+  <p>
+    I'm a web developer with {new Date().getFullYear() - 2022} years of experience and a deep passion for
+    computer science.
+  </p>
 
-<h1>What I do</h1>
-<p>
-  I'm a web developer with {new Date().getFullYear() - 2022} years of experience and a deep passion for
-  computer science.
-</p>
-
-<fieldset id="technologies" role="figure">
-  <legend>Technologies</legend>
-  <figure>
-    <img class="tech-img" src={html} alt="HTML" />
-    <figcaption>HTML5</figcaption>
-  </figure>
-  <figure>
-    <img class="tech-img" src={css} alt="CSS" />
-    <figcaption>CSS</figcaption>
-  </figure>
-  <figure>
-    <img class="tech-img" src={js} alt="JavaScript" />
-    <figcaption>JavaScript</figcaption>
-  </figure>
-  <figure>
-    <img class="tech-img" src={ts} alt="TypeScript" />
-    <figcaption>TypeScript</figcaption>
-  </figure>
-  <figure>
-    <img class="tech-img" src={node} alt="NodeJS" />
-    <figcaption>NodeJS</figcaption>
-  </figure>
-  <figure>
-    <img class="tech-img" src={svelte} alt="Svelte and SvelteKit" />
-    <figcaption>Svelte/Kit</figcaption>
-  </figure>
-  <figure>
-    <img class="tech-img" src={git} alt="Git" />
-    <figcaption>Git</figcaption>
-  </figure>
-  <figure>
-    <img id="fix-ar" class="tech-img" src={docker} alt="Docker" />
-    <figcaption>Docker</figcaption>
-  </figure>
-</fieldset>
+  <fieldset id="technologies" role="figure">
+    <legend>Technologies</legend>
+    <figure>
+      <img class="tech-img" src={html} alt="HTML" />
+      <figcaption>HTML5</figcaption>
+    </figure>
+    <figure>
+      <img class="tech-img" src={css} alt="CSS" />
+      <figcaption>CSS</figcaption>
+    </figure>
+    <figure>
+      <img class="tech-img" src={js} alt="JavaScript" />
+      <figcaption>JavaScript</figcaption>
+    </figure>
+    <figure>
+      <img class="tech-img" src={ts} alt="TypeScript" />
+      <figcaption>TypeScript</figcaption>
+    </figure>
+    <figure>
+      <img class="tech-img" src={node} alt="NodeJS" />
+      <figcaption>NodeJS</figcaption>
+    </figure>
+    <figure>
+      <img class="tech-img" src={svelte} alt="Svelte and SvelteKit" />
+      <figcaption>Svelte/Kit</figcaption>
+    </figure>
+    <figure>
+      <img class="tech-img" src={git} alt="Git" />
+      <figcaption>Git</figcaption>
+    </figure>
+    <figure>
+      <img id="fix-ar" class="tech-img" src={docker} alt="Docker" />
+      <figcaption>Docker</figcaption>
+    </figure>
+  </fieldset>
+</article>
 
 <style>
   #technologies {
@@ -68,7 +68,7 @@
   }
 
   #technologies legend {
-    font-size: 2rem;
+    font-size: calc(var(--fs-n) + .5rem);
     font-weight: bold;
   }
 

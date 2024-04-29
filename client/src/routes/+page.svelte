@@ -1,7 +1,5 @@
-<title>Landing | Lucas McClean</title>
-
 <article>
-  <h1>Landing Page</h1>
+  <h1>Home Page</h1>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum voluptates facilis dolores
     numquam magnam dolore nobis excepturi illum ad fugiat a, voluptas blanditiis nisi sunt tempora?
@@ -31,9 +29,10 @@
 
 <style>
   h1 {
-    width: 850px;
-    margin-bottom: 0.2rem;
-    font-size: 5rem;
+    max-width: 850px;
+    margin-bottom: 1rem;
+    line-height: 1;
+    font-size: calc(var(--fs-h1) + 1rem);
   }
   p {
     max-width: 850px;
