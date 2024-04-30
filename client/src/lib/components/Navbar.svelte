@@ -82,12 +82,47 @@
     }
   }
 
+  @container (width < 750px) {
+    #theme-toggle {
+      display: none;
+      grid-column: 4 / 4;
+    }
+
+    #navbar-links {
+      grid-column: 2 / 4;
+    }
+
+    #navbar::after {
+      animation: loadInScreenS 1s ease-out 1 forwards;
+    }
+  }
+
+  @container (width < 560px) {
+    #navbar-title {
+      display: none;
+    }
+
+    #navbar-links {
+      grid-column: 1 / 4;
+      font-weight: bold;
+    }
+  }
+
   @keyframes loadIn {
     0% {
       width: 0vw;
     }
     100% {
       width: 92vw;
+    }
+  }
+
+  @keyframes loadInScreenS {
+    0% {
+      width: 0vw;
+    }
+    100% {
+      width: 85vw;
     }
   }
 </style>

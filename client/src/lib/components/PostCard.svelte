@@ -67,4 +67,14 @@
   #description {
     max-width: 40%;
   }
+
+  @media (max-width: 680px) {
+    #post-card {
+      flex-direction: column;
+      align-items: start;
+    }
+    #card-info {
+      width: 100%;
+    }
+  }
 </style>

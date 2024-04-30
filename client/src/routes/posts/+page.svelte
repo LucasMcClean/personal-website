@@ -20,7 +20,7 @@
     list-style: none;
     display: grid;
     grid-template: auto / 1fr;
-    gap: 1.5rem;
+    row-gap: 1.5rem;
   }
   p {
     margin-top: 3rem;
